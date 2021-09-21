@@ -43,8 +43,8 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <?php $i = 1; ?>
                             <?php foreach ($produk as $p) : ?>
-                                <?php $i = 1; ?>
                                 <tr>
                                     <th scope="row"><?= $i++ ?></th>
                                     <td><?= $p['nama_produk'] ?></td>
@@ -52,8 +52,8 @@
                                     <td><?= $p['harga'] ?></td>
                                     <td><?= $p['jumblah'] ?></td>
                                     <td>
-                                        <a href=""><span class="badge bg-warning text-dark">Edit</span></a>
-                                        <a href=""><span class="badge bg-danger">Hapus</span></a>
+                                        <a href="<?= base_url('') ?>Home/edit/<?= $p['id'] ?>"><span class="badge bg-warning text-dark">Edit</span></a>
+                                        <a href="<?= base_url('') ?>Home/hapus/<?= $p['id'] ?>" onclick="return confirm('hapus?')"><span class="badge bg-danger">Hapus</span></a>
 
 
                                     </td>
